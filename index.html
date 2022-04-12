@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+</head>
+<script>
+    window.addEventListener("load", function () {
+        var list = document.querySelector(".list");
+        var secondCard = document.getElementById("secondCard")
+        var thirdCard = document.getElementById("thirdCard")
+        var finalCard = document.getElementById("finalCard")
+
+
+        var firstStep = document.getElementById("firstStep")
+        var secondStep = document.getElementById("secondStep")
+        var thirdStep = document.getElementById("thirdStep")
+
+        firstStep.style.display = "none";
+        secondStep.style.display = "none";
+        thirdStep.style.display = "none";
+
+        const deck = [
+            {
+                type: 'club',
+                color: 'black',
+                value: 2,
+            },
+            {
+                type: 'club',
+                color: 'black',
+                value: 3,
+            },
+            {
+                type: 'club',
+                color: 'black',
+                value: 4,
+            },
+            {
+                type: 'club',
+                color: 'black',
+                value: 5,
+            },
+            {
+                type: 'club',
+                color: 'black',
+                value: 6,
+            },
+            {
+                type: 'club',
+                color: 'black',
+                value: 7,
+            },
+            {
+                type: 'club',
+                color: 'black',
+                value: 8,
+            },
+            {
+                type: 'club',
+                color: 'black',
+                value: 9,
+            },
+            {
+                type: 'club',
+                color: 'black',
+                value: 10,
+            },
+
+
+            {
+                type: 'diamonds',
+                color: 'red',
+                value: 2,
+            },
+            {
+                type: 'diamonds',
+                color: 'red',
+                value: 3,
+            },
+            {
+                type: 'diamonds',
+                color: 'red',
+                value: 4,
+            },
+            {
+                type: 'diamonds',
+                color: 'red',
+                value: 5,
+            },
+            {
+                type: 'diamonds',
+                color: 'red',
+                value: 6,
+            },
+            {
+                type: 'diamonds',
+                color: 'red',
+                value: 7,
+            },
+            {
+                type: 'diamonds',
+                color: 'red',
+                value: 8,
+            },
+            {
+                type: 'diamonds',
+                color: 'red',
+                value: 9,
+            },
+            {
+                type: 'diamonds',
+                color: 'red',
+                value: 10,
+            },
+
+
+            {
+                type: 'hearts',
+                color: 'red',
+                value: 2,
+            },
+            {
+                type: 'hearts',
+                color: 'red',
+                value: 3,
+            },
+            {
+                type: 'hearts',
+                color: 'red',
+                value: 4,
+            },
+            {
+                type: 'hearts',
+                color: 'red',
+                value: 5,
+            },
+            {
+                type: 'hearts',
+                color: 'red',
+                value: 6,
+            },
+            {
+                type: 'hearts',
+                color: 'red',
+                value: 7,
+            },
+            {
+                type: 'hearts',
+                color: 'red',
+                value: 8,
+            },
+            {
+                type: 'hearts',
+                color: 'red',
+                value: 9,
+            },
+            {
+                type: 'hearts',
+                color: 'red',
+                value: 10,
+            },
+
+            {
+                type: 'spades',
+                color: 'black',
+                value: 2,
+            },
+            {
+                type: 'spades',
+                color: 'black',
+                value: 3,
+            },
+            {
+                type: 'spades',
+                color: 'black',
+                value: 4,
+            },
+            {
+                type: 'spades',
+                color: 'black',
+                value: 5,
+            },
+            {
+                type: 'spades',
+                color: 'black',
+                value: 6,
+            },
+            {
+                type: 'spades',
+                color: 'black',
+                value: 7,
+            },
+            {
+                type: 'spades',
+                color: 'black',
+                value: 8,
+            },
+            {
+                type: 'spades',
+                color: 'black',
+                value: 9,
+            },
+            {
+                type: 'spades',
+                color: 'black',
+                value: 10,
+            },
+
+        ];
+
+        // console.log(deck)
+
+        var newArray = [];
+
+        var closingDiv = "</div>";
+
+        var upOrDown1 = document.querySelector(".upOrDown1");
+        var upOrDown2 = document.querySelector(".upOrDown2");
+        var upOrDown3 = document.querySelector(".upOrDown3");
+        var upOrDown4 = document.querySelector(".upOrDown4");
+        var upOrDownSubmit = document.getElementById("upOrDownGuessSubmit");
+
+
+        var inOrOut1 = document.querySelector(".inOrOut1");
+        var inOrOut2 = document.querySelector(".inOrOut2");
+        var inOrOut3 = document.querySelector(".inOrOut3");
+        var inOrOut4 = document.querySelector(".inOrOut4");
+        var inOrOutGuessSubmit = document.getElementById("inOrOutGuessSubmit");
+
+
+        var suite1 = document.querySelector(".suite1");
+        var suite2 = document.querySelector(".suite2");
+        var suite3 = document.querySelector(".suite3");
+        var suite4 = document.querySelector(".suite4");
+        var suite5 = document.querySelector(".suite5");
+        var suite6 = document.querySelector(".suite6");
+        var suite7 = document.querySelector(".suite7");
+        var suite8 = document.querySelector(".suite8");
+        var guessSuiteSubmit = document.getElementById("guessSuiteSubmit");
+
+
+        var radioButtonResult1 = document.getElementsByName('blackOrRed');
+        var radioButtonResult = document.getElementsByName('upOrDown');
+        var radioButtonResult2 = document.getElementsByName('inOrOut');
+        var radioButtonResult3 = document.getElementsByName('quessSuite');
+
+
+        upOrDown1.style.display = "none";
+        upOrDown2.style.display = "none";
+        upOrDown3.style.display = "none";
+        upOrDown4.style.display = "none";
+        upOrDownSubmit.style.display = "none";
+
+
+        inOrOut1.style.display = "none";
+        inOrOut2.style.display = "none";
+        inOrOut3.style.display = "none";
+        inOrOut4.style.display = "none";
+        inOrOutGuessSubmit.style.display = "none";
+
+
+        suite1.style.display = "none";
+        suite2.style.display = "none";
+        suite3.style.display = "none";
+        suite4.style.display = "none";
+        suite5.style.display = "none";
+        suite6.style.display = "none";
+        suite7.style.display = "none";
+        suite8.style.display = "none";
+        guessSuiteSubmit.style.display = "none";
+
+
+        var black1 = document.querySelector(".blackOrRed1");
+        var black2 = document.querySelector(".blackOrRed2");
+        var red1 = document.querySelector(".blackOrRed3");
+        var red2 = document.querySelector(".blackOrRed4");
+
+
+          
+        var getRand = document.getElementById("drawRand");
+      
+
+        getRand.addEventListener("click", () => {
+            for (i = 0; i < radioButtonResult1.length; i++) {
+                if(radioButtonResult1[i].checked){
+                    radioButtonResult1Selected = true;
+                    break;
+                }else{
+                    
+
+                    radioButtonResult1Selected = false;
+                    alert("nothing selected, you must select your answer first, page will reload")
+                    location.reload();
+
+                }
+            // if(radioButtonResult1[i].value === "black"){
+            //     radioButtonResult1Selected = true;
+            //   // alert(radioButtonResult1Selected)
+            //         }
+            // if(radioButtonResult1[i].value === "red"){
+            // radioButtonResult1Selected = true;
+            //         }
+                }
+               // alert("radio button alert " + radioButtonResult1Selected);
+            // alert(radioButtonResult1.length);
+            // if(radioButtonResult1.length = 0){
+            //     alert("you must select your answer first")
+            // }else{
+
+           
+                //if(radioButtonResult1Selected === true){
+
+                
+
+            black1.style.display = 'none';
+            black2.style.display = 'none';
+            red1.style.display = 'none';
+            red2.style.display = 'none';
+
+            firstStep.style.display = "block";
+
+            var rand = Math.random() * (deck.length - 0) + 0;
+            var randRound = Math.round(rand)
+            //  alert(randRound);
+
+            var calcRandRound = randRound - 1;
+
+            var firstCardCustomDiv = "<div class=" + deck[randRound].type + deck[randRound].value + deck[randRound].color + ">";
+
+            list.innerHTML = firstCardCustomDiv + closingDiv;
+            newArray.push(deck[randRound])
+
+            deck.splice(randRound, 1);
+            for (i = 0; i < radioButtonResult1.length; i++) {
+                if (radioButtonResult1[i].checked) {
+                    if(radioButtonResult1[i].value === "black" && deck[randRound].color === "black" || radioButtonResult1[i].value === "red" && deck[randRound].color === "red"){
+                    }else{
+                        alert("wrong" + deck[randRound].color)
+                        location.reload();
+                    }
+                }
+            }
+          //  if(deck[randRound].color === "black"  ){
+            //    alert("black")
+          //  }
+
+            // alert(randRound + " " + calcRandRound)
+
+            getRand.style.display = "none";
+            upOrDown1.style.display = "block";
+            upOrDown2.style.display = "block";
+            upOrDown3.style.display = "block";
+            upOrDown4.style.display = "block";
+            upOrDownSubmit.style.display = "block";
+       // }
+   // }
+        })
+
+        upOrDownSubmit.addEventListener("click", () => {
+            firstStep.style.display = "none";
+            secondStep.style.display = "block";
+
+            var newRand = Math.random() * (deck.length - 0) + 0;
+            var newRandRound = Math.round(newRand)
+
+            var calcNewRandRound = newRandRound - 1;
+
+            var secondCardInt = deck[newRandRound];
+
+            var secondCardCustomDiv = "<div class=" + secondCardInt.type + secondCardInt.value  + secondCardInt.color +  ">";
+
+            secondCard.innerHTML = secondCardCustomDiv + closingDiv;
+            newArray.push(deck[newRandRound])
+            deck.splice(newRandRound, 1);
+
+            // console.log(deck)
+            //console.log(newArray)
+
+            upOrDown1.style.display = "none";
+            upOrDown2.style.display = "none";
+            upOrDown3.style.display = "none";
+            upOrDown4.style.display = "none";
+            upOrDownSubmit.style.display = "none";
+
+            for (i = 0; i < radioButtonResult.length; i++) {
+                if (radioButtonResult[i].checked) {
+                    //alert(radioButtonResult[i].value)
+                    // console.log(newArray)
+                    if (radioButtonResult[i].value === "up" && newArray[0].value <= newArray[1].value
+                        || radioButtonResult[i].value === "down" && newArray[0].value === newArray[1].value
+                        || radioButtonResult[i].value === "down" && newArray[0].value >= newArray[1].value) {
+
+                        inOrOut1.style.display = "block";
+                        inOrOut2.style.display = "block";
+                        inOrOut3.style.display = "block";
+                        inOrOut4.style.display = "block";
+                        inOrOutGuessSubmit.style.display = "block";
+
+
+                    } else {
+                        location.reload();
+                        alert("wrong -- Drink" + " " + newArray[1].value + " " + newArray[1].type)
+                    }
+
+
+                }
+
+            }
+        })
+
+        inOrOutGuessSubmit.addEventListener("click", () => {
+            secondStep.style.display = "none";
+            thirdStep.style.display = "block"
+            var thirdRand = Math.random() * (deck.length - 0) + 0;
+            var thirdRandRound = Math.round(thirdRand)
+
+            var caldThirdRandRound = thirdRandRound - 1;
+
+
+            var thirdCardInt = deck[thirdRandRound];
+
+            var thirdCardCustomDiv = "<div class=" + thirdCardInt.type + thirdCardInt.value + thirdCardInt.color + ">";
+
+            thirdCard.innerHTML = thirdCardCustomDiv + closingDiv;
+            newArray.push(deck[thirdRandRound])
+            deck.splice(thirdRandRound, 1);
+
+
+
+            for (i = 0; i < radioButtonResult2.length; i++) {
+                if (radioButtonResult2[i].checked) {
+                   // alert(radioButtonResult2[i].value)
+                    // console.log(newArray)
+                    if (radioButtonResult2[i].value === 'in' && newArray[1].value >= newArray[2].value && newArray[0].value <= newArray[2].value
+                        || radioButtonResult2[i].value === 'in' && newArray[0].value >= newArray[2].value && newArray[1].value <= newArray[2].value) {
+                        //  console.log("correct new card inside")
+
+                        inOrOut1.style.display = "none";
+                        inOrOut2.style.display = "none";
+                        inOrOut3.style.display = "none";
+                        inOrOut4.style.display = "none";
+                        inOrOutGuessSubmit.style.display = "none";
+
+                        suite1.style.display = "block";
+                        suite2.style.display = "block";
+                        suite3.style.display = "block";
+                        suite4.style.display = "block";
+                        suite5.style.display = "block";
+                        suite6.style.display = "block";
+                        suite7.style.display = "block";
+                        suite8.style.display = "block";
+                        guessSuiteSubmit.style.display = "block";
+                    } else if (radioButtonResult2[i].value === 'out' && newArray[1].value > newArray[2].value && newArray[0].value > newArray[2].value
+                        || radioButtonResult2[i].value === 'out' && newArray[0].value < newArray[2].value && newArray[1].value < newArray[2].value) {
+
+                        inOrOut1.style.display = "none";
+                        inOrOut2.style.display = "none";
+                        inOrOut3.style.display = "none";
+                        inOrOut4.style.display = "none";
+                        inOrOutGuessSubmit.style.display = "none";
+
+                        suite1.style.display = "block";
+                        suite2.style.display = "block";
+                        suite3.style.display = "block";
+                        suite4.style.display = "block";
+                        suite5.style.display = "block";
+                        suite6.style.display = "block";
+                        suite7.style.display = "block";
+                        suite8.style.display = "block";
+                        guessSuiteSubmit.style.display = "block";
+                        //console.log("correct new card outside")
+                    } else {
+                        alert("wrong -- drink" + " " + newArray[2].value + " " + newArray[2].type)
+                        location.reload();
+                    }
+                }
+
+            }
+
+            // console.log(newArray)
+            // console.log(deck)
+
+        })
+
+        guessSuiteSubmit.addEventListener("click", () => {
+            var finalRand = Math.random() * (deck.length - 0) + 0;
+            var finalRandRound = Math.round(finalRand)
+
+            var caldFianlRandRound = finalRandRound - 1;
+
+
+            var fianlCardInt = deck[finalRandRound];
+
+            var finalCardCustomDiv = "<div class=" + fianlCardInt.type + fianlCardInt.value + fianlCardInt.color + ">";
+
+            finalCard.innerHTML = finalCardCustomDiv + closingDiv;
+            newArray.push(deck[finalRandRound])
+            deck.splice(finalRandRound, 1);
+
+            console.log(newArray)
+            console.log(deck)
+            for (i = 0; i < radioButtonResult3.length; i++) {
+                if (radioButtonResult3[i].checked) {
+                   // alert(radioButtonResult3[i].value)
+                    // console.log(newArray)
+
+                    if (radioButtonResult3[i].value === "diamonds" && newArray[3].type === "diamonds"
+                        || radioButtonResult3[i].value === "club" && newArray[3].type === "club"
+                        || radioButtonResult3[i].value === "hearts" && newArray[3].type === "hearts"
+                        || radioButtonResult3[i].value === "spades" && newArray[3].type === "spades") {
+                        thirdStep.style.display = "none"
+
+                       // alert("correct you guessed" + radioButtonResult3[i].value + "the card was " + newArray[3].type)
+                    } else {
+                        alert("wrong -- drink" + " " + newArray[3].type)
+                        location.reload();
+                    }
+
+                }
+
+            }
+        })
+
+
+    })
+
+</script>
+
+<body>
+    <div class="drawnCards">
+        <div class="list"></div>
+        <div id="secondCard"></div>
+        <div id="thirdCard"></div>
+        <div id="finalCard"></div>
+
+    </div>
+    <Label for="black" class="blackOrRed1">black</Label>
+
+    <input type="radio" name="blackOrRed" id="black" class="blackOrRed2" value="black">
+    <Label for="white" class="blackOrRed3">red</Label>
+
+    <input type="radio" name="blackOrRed" id="white" class="blackOrRed4" value="red">
+
+    <button id="drawRand">Draw A Random Card</button>
+
+    <h2 id="firstStep">Next card higher or lower?</h2>
+    <Label for="up" class="upOrDown1">up</Label>
+
+    <input type="radio" name="upOrDown" id="up" class="upOrDown2" value="up">
+
+    <Label for="down" class="upOrDown3">down</Label>
+
+    <input type="radio" name="upOrDown" id="down" class="upOrDown4" value="down">
+
+    <button id="upOrDownGuessSubmit">guess</button>
+
+
+    <h2 id="secondStep">is the next card between the 2 values or ousite the 2 values?</h2>
+    <Label for="in" class="inOrOut1">in</Label>
+
+    <input type="radio" name="inOrOut" id="in" class="inOrOut2" value="in">
+
+    <Label for="out" class="inOrOut3">out</Label>
+
+    <input type="radio" name="inOrOut" id="out" class="inOrOut4" value="out">
+
+    <button id="inOrOutGuessSubmit">guess</button>
+
+    <h2 id="thirdStep">guess the suite of the next card</h2>
+    <Label for="suite2" class="suite1">spades</Label>
+
+    <input type="radio" name="quessSuite" id="suite2" class="suite2" value="spades">
+
+    <Label for="suite4" class="suite3">hearts</Label>
+
+    <input type="radio" name="quessSuite" id="suite4" class="suite4" value="hearts">
+
+    <Label for="suite6" class="suite5">clubs</Label>
+
+    <input type="radio" name="quessSuite" id="suite6" class="suite6" value="club">
+
+    <Label for="suite8" class="suite7">diamonds</Label>
+
+    <input type="radio" name="quessSuite" id="suite8" class="suite8" value="diamonds">
+
+    <button id="guessSuiteSubmit">guess</button>
+</body>
+
+</html>

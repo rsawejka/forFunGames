@@ -1,0 +1,266 @@
+.drawnCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.club2black{
+    background-image: url("cards/2_of_clubs.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.club3black{
+    background-image: url("cards/3_of_clubs.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.club4black{
+    background-image: url("cards/4_of_clubs.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.club5black{
+    background-image: url("cards/5_of_clubs.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.club6black{
+    background-image: url("cards/6_of_clubs.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.club7black{
+    background-image: url("cards/7_of_clubs.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.club8black{
+    background-image: url("cards/8_of_clubs.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.club9black{
+    background-image: url("cards/9_of_clubs.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.club10black{
+    background-image: url("cards/10_of_clubs.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.spades2black{
+    background-image: url("cards/2_of_spades.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.spades3black{
+    background-image: url("cards/3_of_spades.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.spades4black{
+    background-image: url("cards/4_of_spades.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.spades5black{
+    background-image: url("cards/5_of_spades.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.spades6black{
+    background-image: url("cards/6_of_spades.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.spades7black{
+    background-image: url("cards/7_of_spades.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.spades8black{
+    background-image: url("cards/8_of_spades.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.spades9black{
+    background-image: url("cards/9_of_spades.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.spades10black{
+    background-image: url("cards/10_of_spades.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.diamonds2red{
+    background-image: url("cards/2_of_diamonds.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.diamonds3red{
+    background-image: url("cards/3_of_diamonds.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.diamonds4red{
+    background-image: url("cards/4_of_diamonds.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.diamonds5red{
+    background-image: url("cards/5_of_diamonds.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.diamonds6red{
+    background-image: url("cards/6_of_diamonds.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.diamonds7red{
+    background-image: url("cards/7_of_diamonds.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.diamonds8red{
+    background-image: url("cards/8_of_diamonds.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.diamonds9red{
+    background-image: url("cards/9_of_diamonds.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.diamonds10red{
+    background-image: url("cards/10_of_diamonds.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hearts2red{
+    background-image: url("cards/2_of_hearts.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hearts3red{
+    background-image: url("cards/3_of_hearts.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hearts4red{
+    background-image: url("cards/4_of_hearts.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hearts5red{
+    background-image: url("cards/5_of_hearts.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hearts6red{
+    background-image: url("cards/6_of_hearts.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hearts7red{
+    background-image: url("cards/7_of_hearts.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hearts8red{
+    background-image: url("cards/8_of_hearts.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hearts9red{
+    background-image: url("cards/9_of_hearts.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hearts10red{
+    background-image: url("cards/10_of_hearts.png");
+    height: 300px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
